@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+hmtl {
+    /*normalmente 1 rem 16 px*/
+    /*esto hace q 1 rem sean 10px*/
+    font-size: 62.5%;
+}
+img {
+    /*esto hace q todas las imagenes no se corte cuando achico la pantalla de la web */
+    max-width: 100%;
+}
+/* Header en todas las paginas */
+header {
+    @include flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: $color-header;
+    height: 80px;
+    width: 100%;
+    }
+    header nav {
+        display: flex;
+        justify-content: center;
+    }
+    nav {
+        text-align:justify;
+    }
+    .menu {
+        @include flex-fila-centrado;
+        justify-content: space-between;
+        gap: $espacio-chico;
+        list-style: none;
+    }
+    .menu li a {
+        padding: 4px;
+        text-decoration: none;
+        border-radius: 3px;
+        background-color: #EEDDC9;
+        color: $color-letras;
+        display: inline-block;
+        font-family: 'Montserrat', sans-serif;
+        align-items: center;
+        font-size: $fuente-media;
+            /* Menu con active y hover anidado*/
+        &:active {
+            background-color: #c08660;
+        }
+        &:hover {
+            border: solid 1px $color-letras;
+        }
+    }
+    .logo {
+        text-decoration: none;
+        font-size: $fuente-grande;
+        color: $color-letras;
+        margin-left: 50px;
+        margin-right: 0;
+        font-family: $fuente-principal;
+    }
+    section .redes-header {
+        display: flex;
+        list-style: none;
+    }
+    .redes-header {
+        flex-direction: column;
+        margin: auto;
+    }
+    .redes-header li a {
+        text-decoration: none;
+        color: $color-letras;
+        font-family: $fuente-principal;
+    }
+     .linkedin, .instagram {
+        @include iconos-desktop;
+    }
+/* Media queries para header en formato mobile y tablet */
+@media (max-width: $tablet) {
+    header{
+        flex-direction: column;
+        height: 100%;
+        position: sticky;
+        width: 100%;
+        gap: 10px;
+        margin-top: 0;
+    }
+    header .logo {
+        font-size: $fuente-media;
+        margin-left: 0px;
+    }
+    header nav .menu li a {
+        font-size: 16px;
+        padding: 1px;
+    }
+    header .redes-header {
+        @include flex-fila-centrado;
+        gap: 10px;
+        align-items: left;
+    }
+    .instagram, .linkedin {
+       @include iconos-tablet;
+    }
+}
+@media (max-width: $mobile) {
+    header .logo {
+        font-size: $fuente-chica;
+        margin-left: 0px;
+    }
+    header nav .menu li a {
+        font-size: 12px;
+        padding: 1px;
+    }
+    header .redes-header {
+        @include flex-fila-centrado;
+        gap: 10px;
+        align-items: left;
+    }
+    .instagram, .linkedin {
+        @include iconos-mobile;
+}
+}
+/* Body con la foto principal en todas las paginas */
+body {
+    background-color: $color-body;
+    position: sticky;
+    margin-top: 80px;
+    color: $color-letras;
+    font-family: $fuente-principal;
+}
+.foto-principal {
+    display: block;
+    width: 100%;
+    height: 250px;
+}
+/* media queries para la imagen banner */
+@media (max-width: $tablet) {
+    .foto-principal {
+        height: 100%;
+    }
+}
+/* Footer en todas las paginas */
+footer {
+    @include flex;
+    justify-content: space-between;
+    height: 100px;
+    width: 100%;
+    margin-top: 10px;
+    background-color: $color-footer;
+    }
+footer p {
+    font-size: 16px;
+}
+footer a button {
+    font-size: 16px;
+}
+footer ul {
+    @include flex;
+    flex-direction: column;
+}
+.contacto {
+    @include flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+} 
+.contacto h4 {
+    font-size: 16px;
+}
+.contacto li {
+    font: 12px;
+}
+.contacto li a {
+    padding: 5px;
+    text-decoration: none;
+    color: $color-letras;
+} 
+.ir-hacia-arriba {
+    border-radius: 3px;
+    padding: 2px;
+    background-color: $color-footer;
+    cursor: pointer;
+}
+.redes-footer {
+    @include flex;
+    flex-direction: column;
+    list-style: none;
+}
+.redes-footer li a {
+    text-decoration: none;
+    color: $color-letras;
+    font-family: $fuente-principal;
+}
+/* Media queries para footer version tablet*/
+@media (max-width: $tablet) {
+    footer p {
+        font-size: $fuente-chica;
+    }
+    footer a button {
+        font-size: 12px;
+    }
+    footer .contacto h4 {
+        font-size: $fuente-chica;
+    }
+    footer .contacto li {
+        font-size: 12px; 
+    }
+}
+/* media queries para el footer version un poco mas grande que Mobile*/
+@media (max-width: 480px) {
+    footer {
+        flex-direction: column-reverse;
+        height: 100%;
+        align-content: center;
+    }
+    footer p {
+        font-size: 10px;
+    }
+    footer a button {
+        font-size: 12px;
+        align-items: center;
+    }
+    footer .contacto {
+        padding-left: 0px;
+    }
+    footer .contacto h4 {
+        font-size: 12px;
+    }
+    footer .contacto li {
+        font-size: 10px;
+    }
+    footer .redes-footer {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-self: left;
+        margin-top: 10px;
+        padding-left: 0px;
+    }
+    footer a .ir-hacia-arriba {
+        padding: 2px;
+    }
+}

@@ -1,695 +1,906 @@
+@charset "UTF-8";
+/*colores*/
+/*tamaño fuentes*/
+/*resolucion de pantallas*/
+/*margen y paddings*/
+/*fuente*/
+/*Mixin para los flexs*/
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
+
 hmtl {
-    /*normalmente 1 rem 16 px*/
-    /*esto hace q 1 rem sean 10px*/
-    font-size: 62.5%;
+  /*normalmente 1 rem 16 px*/
+  /*esto hace q 1 rem sean 10px*/
+  font-size: 62.5%;
 }
+
 img {
-    /*esto hace q todas las imagenes no se corte cuando achico la pantalla de la web */
-    max-width: 100%;
+  /*esto hace q todas las imagenes no se corte cuando achico la pantalla de la web */
+  max-width: 100%;
 }
+
 /* Header en todas las paginas */
 header {
-display: flex;
-align-items: center;
-justify-content: space-between;
-position: fixed;
-top: 0;
-z-index: 1;
-background-color: #FDF6F0;
-height: 80px;
-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: #FDF6F0;
+  height: 80px;
+  width: 100%;
 }
+
 header nav {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
+
 nav {
-    text-align:justify;
+  text-align: justify;
 }
+
 .menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 20px;
-    list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  gap: 20px;
+  list-style: none;
 }
+
 .menu li a {
-    padding: 4px;
-    text-decoration: none;
-    border-radius: 3px;
-    background-color: #EEDDC9;
-    color: #415047;
-    display: inline-block;
-    font-family: 'Montserrat', sans-serif;
-    align-items: center;
+  padding: 4px;
+  text-decoration: none;
+  border-radius: 3px;
+  background-color: #EEDDC9;
+  color: #415047;
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  align-items: center;
+  font-size: 20px;
+  /* Menu con active y hover anidado*/
 }
-/* Menu con hover */
 .menu li a:active {
-    background-color: #c08660;
+  background-color: #c08660;
 }
 .menu li a:hover {
-    border: solid 1px #415047;
-} 
+  border: solid 1px #415047;
+}
+
 .logo {
-    text-decoration: none;
-    font-size: 30px;
-    color: #415047;
-    margin-left: 50px;
-    margin-right: 0;
-    font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  font-size: 30px;
+  color: #415047;
+  margin-left: 50px;
+  margin-right: 0;
+  font-family: "Montserrat", sans-serif;
 }
+
 section .redes-header {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 }
+
 .redes-header {
-    flex-direction: column;
-    margin: auto;
+  flex-direction: column;
+  margin: auto;
 }
+
 .redes-header li a {
-    text-decoration: none;
-    color: #415047;
-    font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  color: #415047;
+  font-family: "Montserrat", sans-serif;
 }
-.instagram {
-    width: 20px;
-    height: 20px;
+
+.linkedin, .instagram {
+  width: 20px;
+  height: 20px;
 }
-.linkedin {
-    width: 20px;
-    height: 20px;
-}
+
 /* Media queries para header en formato mobile y tablet */
 @media (max-width: 768px) {
-    header{
-        flex-direction: column;
-        height: 100%;
-        position: sticky;
-        width: 100%;
-        gap: 10px;
-        margin-top: 0;
-    }
-    header .logo {
-        font-size: 18px;
-        margin-left: 0px;
-    }
-    header nav .menu li a {
-        font-size: 14px;
-        padding: 1px;
-    }
-    header .redes-header {
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        align-items: left;
-    }
-    .instagram {
-        width: 15px;
-        height: 15px;
-    }
-    .linkedin {
-        width: 15px;
-        height: 15px;
-    }
+  header {
+    flex-direction: column;
+    height: 100%;
+    position: sticky;
+    width: 100%;
+    gap: 10px;
+    margin-top: 0;
+  }
+  header .logo {
+    font-size: 20px;
+    margin-left: 0px;
+  }
+  header nav .menu li a {
+    font-size: 16px;
+    padding: 1px;
+  }
+  header .redes-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    align-items: left;
+  }
+  .instagram, .linkedin {
+    width: 15px;
+    height: 15px;
+  }
 }
-@media (max-width: 380px){
-    header .logo {
-        font-size: 16px;
-        margin-left: 0px;
-    }
-    header nav .menu li a {
-        font-size: 12px;
-        padding: 1px;
-    }
-    header .redes-header {
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        align-items: left;
-    }
-    .instagram {
-        width: 10px;
-        height: 10px;
-    }
-    .linkedin {
-        width: 10px;
-        height: 10px;
-    } 
+@media (max-width: 380px) {
+  header .logo {
+    font-size: 14px;
+    margin-left: 0px;
+  }
+  header nav .menu li a {
+    font-size: 12px;
+    padding: 1px;
+  }
+  header .redes-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    align-items: left;
+  }
+  .instagram, .linkedin {
+    width: 10px;
+    height: 10px;
+  }
 }
 /* Body con la foto principal en todas las paginas */
 body {
-    background-color: #FDF6F0;
-    position: sticky;
-    margin-top: 80px;
-    color:#415047;
-    font-family: 'Montserrat', sans-serif;
+  background-color: #FDF6F0;
+  position: sticky;
+  margin-top: 80px;
+  color: #415047;
+  font-family: "Montserrat", sans-serif;
 }
+
 .foto-principal {
-    display: block;
-    width: 100%;
-    height: 250px;
+  display: block;
+  width: 100%;
+  height: 250px;
 }
+
 /* media queries para la imagen banner */
 @media (max-width: 768px) {
-    .foto-principal {
-        height: 100%;
-    }
-}
-/* Empieza inicio */
-/* Grid para el inicio */
-.sobre-mi {
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
-    grid-template-rows: 0.5fr 2fr 2fr;
-    row-gap: 20px;
-    column-gap: 10px;
-    grid-template-areas: 
-        ". titulo ."
-        "foto parrafo parrafo"
-        ". video .";
-        justify-content: stretch;
-        align-content: stretch;
-    }
-.sobre-mi-titulo {
-        grid-area: titulo;
-        font-size: 2rem;
-        align-self: center;
-        justify-self: center;
-    }
-.sobre-mi-foto {
-    grid-area: foto;
-    width: 100%;
+  .foto-principal {
     height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-left: 60px;
+  }
 }
-.sobre-mi-parrafos {
-    grid-area: parrafo;
-    margin-top: 50px;
-    justify-self: center;
-    margin-right: 60px;
-    margin-left: 60px;
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-}
-.sobre-mi-parrafos p {
-    font-size: 1rem;
-}
-.sobre-mi-video {
-    grid-area: video;
-    border-radius: 10px;
-    justify-self: center;
-    margin-top: 30px;
-    margin-bottom: 50px;
-}
-/* Media queries para formato mobile y tablet del body del index */
-@media (max-width: 768px) {
-    .sobre-mi {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-    }
-    .sobre-mi-titulo {
-        font-size: 20px;
-        align-self: center;
-        justify-self: center;
-    }
-    .sobre-mi-foto {
-        width: 250px;
-        height: 250px;
-        margin-left: 0px;
-    }
-    .sobre-mi-parrafos {
-        margin-top: 0px;
-        justify-self: center;
-        margin-right: 20px;
-        margin-left: 20px;
-        gap: 5px;
-    }
-    .sobre-mi-parrafos p {
-        font-size: 14px;
-        justify-items: center;
-    }
-    .sobre-mi-video {
-        justify-self: center;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        width: 350px;
-        height: 300px;
-    }
-}
-/* Media Queries para la foto principal tamaño mayor a tabley y menor a desktop */
 /* Footer en todas las paginas */
 footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100px;
-    width: 100%;
-    margin-top: 10px;
-    background-color: #EEDDC9;
-    }
-footer p {
-    font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  height: 100px;
+  width: 100%;
+  margin-top: 10px;
+  background-color: #EEDDC9;
 }
-footer a button {
-    font-size: 16px;
-}
-footer ul {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-.contacto {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    list-style: none;
-} 
-.contacto h4 {
-    font-size: 16px;
-}
-.contacto li {
-    font: 12px;
-}
-.contacto li a {
-    padding: 5px;
-    text-decoration: none;
-    color:#415047;
-} 
-.ir-hacia-arriba {
-    border-radius: 3px;
-    padding: 2px;
-    background-color: #EEDDC9;
-    cursor: pointer;
-}
-.redes-footer {
-display: flex;
-flex-direction: column;
-list-style: none;
-}
-.redes-footer li a {
-    text-decoration: none;
-    color: #415047;
-    font-family: 'Montserrat', sans-serif;
-}
-/* Media queries para footer version tablet, tamaño letra un poco mas chico*/
-@media (max-width: 768px) {
-    footer p {
-        font-size: 14px;
-    }
-    footer a button {
-        font-size: 14px;
-    }
-    footer .contacto {
-        align-items: center;
-        justify-items: center;
-    }
-    footer .contacto h4 {
-        font-size: 14px;
-    }
-    footer .contacto li {
-        font-size: 10px; 
-    }
-}
-/* media queries para el footer version Mobile tamaño letra mas chico y distinto flex direction*/
-@media (max-width: 480px) {
-    footer {
-        flex-direction: column-reverse;
-        height: 100%;
 
-        align-content: center;
-    }
-    footer p {
-        font-size: 10px;
-    }
-    footer a button {
-        font-size: 12px;
-        align-items: center;
-    }
-    footer .contacto {
-        padding-left: 0px;
-    }
-    footer .contacto h4 {
-        font-size: 12px;
-    }
-    footer .contacto li {
-        font-size: 10px;
-    }
-    footer .redes-footer {
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        justify-self: left;
-        margin-top: 10px;
-        padding-left: 0px;
-    }
-    footer a .ir-hacia-arriba {
-        padding: 2px;
-    }
+footer p {
+  font-size: 16px;
 }
-/* Empieza Talleres */
-.talleres {
-    margin: 40px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+
+footer a button {
+  font-size: 16px;
 }
-.talleres h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+
+footer ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-.parrafo-talleres {
-display: inline-block;
-justify-content: space-between;
-margin: 10px;
+
+.contacto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
 }
-.consulta-talleres {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 10px;
-    background-color: #5A6C61;
-    padding: 10px;
-    justify-content: center;
-    margin-left: 60px;
-    margin-right: 60px;
+
+.contacto h4 {
+  font-size: 16px;
 }
-.parrafo-consulta-talleres {
-    color: #FDF6F0;
-    display: inline-block;
-    text-align: center;
+
+.contacto li {
+  font: 12px;
 }
-.whatsapp {
-    margin-top: 10px;
-    border-radius: 3px;
-    padding: 5px;
-    color: #FDF6F0;
-    cursor: pointer;
-    background-color:#5A6C61;
+
+.contacto li a {
+  padding: 5px;
+  text-decoration: none;
+  color: #415047;
 }
-.alumnos {
-    display: flex;
-    justify-content: left;
+
+.ir-hacia-arriba, .enviar-consulta, .limpiar-el-formulario {
+  border-radius: 3px;
+  padding: 2px;
+  background-color: #EEDDC9;
+  cursor: pointer;
 }
-.alumnos h4 {
-    font-size: 1,2rem;
-    margin-left: 50px;
-    color: #c08660;
-    margin-top: 50px;
+
+.redes-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  list-style: none;
 }
-.fotos-alumnos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 20px;   
+
+.redes-footer li a {
+  text-decoration: none;
+  color: #415047;
+  font-family: "Montserrat", sans-serif;
 }
-.fotos-alumnos img {
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
-}
-/* Media Queries talleres en mobile y tablet*/
+
+/* Media queries para footer version tablet*/
 @media (max-width: 768px) {
-    .talleres {
-        margin: 20px;
-    }
-    .talleres h2 {
-        font-size: 20px;
-    }
-    .parrafo-talleres {
+  footer p {
     font-size: 14px;
-    margin: 10px;
-    }
-    .consulta-talleres {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        padding: 5px;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-    .whatsapp {
-        margin-top: 5px;
-        border-radius: 3px;
-        padding: 3px;
-    }
-    .alumnos h4 {
-        font-size: 14px;
-        margin-left: 10px;
-        margin-top: 10px;
-    }
-    .fotos-alumnos {
-        gap: 10px;
-        margin-top: 10px;   
-    }
-    .fotos-alumnos img {
-        width: 250px;
-        height: 250px;
-        object-fit: cover;
-    }  
+  }
+  footer a button {
+    font-size: 12px;
+  }
+  footer .contacto h4 {
+    font-size: 14px;
+  }
+  footer .contacto li {
+    font-size: 12px;
+  }
 }
-/* aca empieza mis obras */
-.mis-obras {
-    margin-top: 40px;
+/* media queries para el footer version un poco mas grande que Mobile*/
+@media (max-width: 480px) {
+  footer {
+    flex-direction: column-reverse;
+    height: 100%;
+    align-content: center;
+  }
+  footer p {
+    font-size: 10px;
+  }
+  footer a button {
+    font-size: 12px;
+    align-items: center;
+  }
+  footer .contacto {
+    padding-left: 0px;
+  }
+  footer .contacto h4 {
+    font-size: 12px;
+  }
+  footer .contacto li {
+    font-size: 10px;
+  }
+  footer .redes-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-self: left;
+    margin-top: 10px;
+    padding-left: 0px;
+  }
+  footer a .ir-hacia-arriba, footer a .enviar-consulta, footer a .limpiar-el-formulario {
+    padding: 2px;
+  }
+}
+/* Empieza inicio */
+/* Grid para el inicio en formato desktop*/
+.sobre-mi {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-rows: 0.5fr 2fr 2fr;
+  row-gap: 20px;
+  column-gap: 10px;
+  grid-template-areas: ". titulo ." "foto parrafo parrafo" ". video .";
+  justify-content: stretch;
+  align-content: stretch;
+}
+
+.sobre-mi-titulo {
+  grid-area: titulo;
+  font-size: 30px;
+  align-self: center;
+  justify-self: center;
+}
+
+.sobre-mi-foto {
+  grid-area: foto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-left: 60px;
+}
+
+.sobre-mi-parrafos {
+  grid-area: parrafo;
+  margin-top: 50px;
+  justify-self: center;
+  margin-right: 60px;
+  margin-left: 60px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.sobre-mi-parrafos p {
+  font-size: 16px;
+}
+
+.sobre-mi-video {
+  grid-area: video;
+  border-radius: 10px;
+  justify-self: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+/* Media queries para formato mobile y tablet del index*/
+@media (max-width: 768px) {
+  .sobre-mi {
     display: flex;
     align-items: center;
-    flex-direction: column;
-    justify-content: center;
-}
-.mis-obras h2 {
-    font-size: 2rem;
-    justify-content: center;
-}
-.ilustracion {
-    display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
-}
-.ilustracion h3 {
-    justify-content: center;
+    gap: 10px;
+  }
+  .sobre-mi-titulo {
     font-size: 20px;
-    margin: 50px;
-    background-color: #c08660;
-    border-radius: 10px;
-    padding: 10px;
+    align-self: center;
+    justify-self: center;
+  }
+  .sobre-mi-foto {
+    width: 250px;
+    height: 250px;
+    margin-left: 0px;
+  }
+  .sobre-mi-parrafos {
+    margin-top: 0px;
+    justify-self: center;
+    margin-right: 20px;
+    margin-left: 20px;
+    gap: 5px;
+  }
+  .sobre-mi-parrafos p {
+    font-size: 14px;
+    justify-items: center;
+  }
+  .sobre-mi-video {
+    justify-self: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 350px;
+    height: 300px;
+  }
 }
-.fotos-ilustracion {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 200px;
-    flex-wrap: wrap;
-}
-.fotos-ilustracion img {
-    width: 400px;
-    height: 400px;
-    border-radius: 10px;
-}
-.pinturas {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-.pinturas h3 {
-    justify-content: center;
-    font-size: 20px;
-    margin: 50px;
-    background-color: #c08660;
-    border-radius: 10px;
-    padding: 10px;
-}
-.fotos-pinturas {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 200px;
-    flex-wrap: wrap;
-}
-.fotos-pinturas img {
-    width: 400px;
-    height: 400px;
-    border-radius: 10px;
-}
-.retratos {
+@media (max-width: 380px) {
+  .sobre-mi {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
-.retratos h3 {
-    justify-content: center;
-    font-size: 20px;
-    margin: 50px;
-    background-color: #c08660;
-    border-radius: 10px;
-    padding: 10px;
-}
-.fotos-retratos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 200px;
-    flex-wrap: wrap;
-}
-.fotos-retratos img {
-    width: 400px;
-    height: 400px;
-    border-radius: 10px;
-}
-/* Media queries de Obras en mobile y tablet */
-@media (max-width: 768px) { 
-    .mis-obras {
-        margin-top: 20px;
-    }
-    .mis-obras h2 {
-        font-size: 20px;
-    }
-    .ilustracion h3 {
-        font-size: 14px;
-        padding: 6px;
-    }
-    .fotos-ilustracion {
-        gap: 50px;
-    }
-    .fotos-ilustracion img {
-        width: 250px;
-        height: 250px;
-        object-fit: cover;
-    }
-    .pinturas h3 {
-        font-size: 14px;
-        padding: 6px;
-    }
-    .fotos-pinturas {
-        gap: 50px;
-    }
-    .fotos-pinturas img {
-        width: 250px;
-        height: 250px;
-        object-fit: cover;
-    }
-    .retratos h3 {
-        font-size: 14px;
-        padding: 6px;
-    }
-    .fotos-retratos {
-        gap: 50px;
-    }
-    .fotos-retratos img {
-        width: 250px;
-        height: 250px;
-        object-fit: cover;
-    }
+    gap: 5px;
+  }
+  .sobre-mi-titulo {
+    font-size: 16px;
+    align-self: center;
+    justify-self: center;
+  }
+  .sobre-mi-foto {
+    width: 200px;
+    height: 200px;
+    margin-left: 0px;
+  }
+  .sobre-mi-parrafos {
+    margin-top: 0px;
+    justify-self: center;
+    margin-right: 20px;
+    margin-left: 20px;
+    gap: 5px;
+  }
+  .sobre-mi-parrafos p {
+    font-size: 12px;
+    justify-items: center;
+  }
+  .sobre-mi-video {
+    justify-self: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 250px;
+    height: 200px;
+  }
 }
 /* aca empieza galeria */
 .galeria {
-    margin: 40px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+  margin: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
 }
+
 .galeria h2 {
-font-size: 2rem;
-margin-left: 50px;
+  font-size: 30px;
+  margin-left: 50px;
 }
+
 .fotos-galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 20px;   
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
 }
+
 .fotos-galeria img {
-    width: 400px;
-    height: 400px;
-    border-radius: 10px; 
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
 }
+
 /* Media Queries galeria en formato tablet */
-@media (max-width:768px) {
-    .galeria {
-        margin: 20px;
-    }
-    .galeria h2 {
+@media (max-width: 768px) {
+  .galeria {
+    margin: 20px;
+  }
+  .galeria h2 {
     font-size: 20px;
-    }
-    .fotos-galeria img {
-        width: 300px;
-        height: 300px;
-    }
+  }
+  .fotos-galeria img {
+    width: 300px;
+    height: 300px;
+  }
 }
 /* Media queries galeria Mobile */
-@media (max-width:380px) {
-    .galeria {
-        margin: 20px;
-    }
-    .galeria h2 {
+@media (max-width: 380px) {
+  .galeria {
+    margin: 20px;
+  }
+  .galeria h2 {
+    font-size: 16px;
+  }
+  .fotos-galeria img {
+    width: 250px;
+    height: 250px;
+  }
+}
+/* aca empieza mis obras */
+.mis-obras {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mis-obras h2 {
+  font-size: 30px;
+  justify-content: center;
+}
+
+.ilustracion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ilustracion h3 {
+  justify-content: center;
+  font-size: 20px;
+  margin: 50px;
+  background-color: #c08660;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.fotos-ilustracion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 200px;
+  flex-wrap: wrap;
+}
+
+.fotos-ilustracion img {
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.pinturas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.pinturas h3 {
+  justify-content: center;
+  font-size: 20px;
+  margin: 50px;
+  background-color: #c08660;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.fotos-pinturas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 200px;
+  flex-wrap: wrap;
+}
+
+.fotos-pinturas img {
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.retratos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.retratos h3 {
+  justify-content: center;
+  font-size: 20px;
+  margin: 50px;
+  background-color: #c08660;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.fotos-retratos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 200px;
+  flex-wrap: wrap;
+}
+
+.fotos-retratos img {
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+}
+
+/* Media queries de Obras en mobile y tablet */
+@media (max-width: 768px) {
+  .mis-obras {
+    margin-top: 20px;
+  }
+  .mis-obras h2 {
     font-size: 20px;
-    }
-    .fotos-galeria img {
-        width: 250px;
-        height: 250px;
-    }
+  }
+  .ilustracion h3 {
+    font-size: 14px;
+    padding: 6px;
+  }
+  .fotos-ilustracion {
+    gap: 50px;
+  }
+  .fotos-ilustracion img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+  .pinturas h3 {
+    font-size: 14px;
+    padding: 6px;
+  }
+  .fotos-pinturas {
+    gap: 50px;
+  }
+  .fotos-pinturas img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+  .retratos h3 {
+    font-size: 14px;
+    padding: 6px;
+  }
+  .fotos-retratos {
+    gap: 50px;
+  }
+  .fotos-retratos img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
 }
-.contacto{
-    display: flex;
-    justify-content: center;
-    margin: 40px;
-} 
-.contacto h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
+@media (max-width: 380px) {
+  .mis-obras {
+    margin-top: 20px;
+  }
+  .mis-obras h2 {
+    font-size: 16px;
+  }
+  .ilustracion h3 {
+    font-size: 14px;
+    padding: 6px;
+  }
+  .fotos-ilustracion {
+    gap: 30px;
+  }
+  .fotos-ilustracion img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+  }
+  .pinturas h3 {
+    font-size: 14px;
+    padding: 6px;
+  }
+  .fotos-pinturas {
+    gap: 30px;
+  }
+  .fotos-pinturas img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+  }
+  .retratos h3 {
+    font-size: 14px;
+    padding: 6px;
+  }
+  .fotos-retratos {
+    gap: 30px;
+  }
+  .fotos-retratos img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+  }
 }
-.form {
-    display: flex;
-    align-items: left;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: left;
+/* Empieza Talleres */
+.talleres {
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-.form div {
-    display: flex;
-    align-items: left;
-    flex-direction: row;
+
+.talleres h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.parrafo-talleres {
+  display: inline-block;
+  justify-content: space-between;
+  margin: 10px;
+  font-size: 20px;
+}
+
+.consulta-talleres {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: #5A6C61;
+  padding: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.parrafo-consulta-talleres {
+  color: #FDF6F0;
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+}
+
+.whatsapp {
+  margin-top: 10px;
+  border-radius: 3px;
+  padding: 5px;
+  color: #FDF6F0;
+  cursor: pointer;
+  background-color: #5A6C61;
+  font-size: 20px;
+}
+
+.alumnos {
+  display: flex;
+  justify-content: left;
+}
+
+.alumnos h4 {
+  font-size: 20px;
+  margin-left: 50px;
+  color: #c08660;
+  margin-top: 50px;
+}
+
+.fotos-alumnos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.fotos-alumnos img {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+/* Media Queries talleres en mobile y tablet*/
+@media (max-width: 768px) {
+  .talleres {
+    margin: 20px;
+  }
+  .talleres h2 {
+    font-size: 20px;
+  }
+  .parrafo-talleres {
+    font-size: 14px;
+    margin: 20px;
+  }
+  .consulta-talleres {
+    margin: 10px;
+    padding: 5px;
+  }
+  .parrafo-consulta-talleres {
+    font-size: 14px;
+  }
+  .whatsapp {
+    margin-top: 5px;
+    border-radius: 3px;
+    padding: 3px;
+    font-size: 14px;
+  }
+  .alumnos h4 {
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .fotos-alumnos {
     gap: 10px;
-    font-family: 'Montserrat', sans-serif;
+    margin-top: 10px;
+  }
+  .fotos-alumnos img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+  }
 }
+@media (max-width: 380px) {
+  .talleres {
+    margin: 10px;
+  }
+  .talleres h2 {
+    font-size: 16px;
+  }
+  .parrafo-talleres {
+    font-size: 12px;
+    margin: 20px;
+  }
+  .consulta-talleres {
+    margin: 10px;
+    padding: 5px;
+  }
+  .parrafo-consulta-talleres {
+    font-size: 12px;
+  }
+  .whatsapp {
+    margin-top: 5px;
+    border-radius: 3px;
+    padding: 3px;
+    font-size: 12px;
+  }
+  .alumnos h4 {
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .fotos-alumnos {
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .fotos-alumnos img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+}
+.contacto {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+.contacto h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.form {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: left;
+}
+
+.form div {
+  display: flex;
+  align-items: left;
+  flex-direction: row;
+  gap: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form-control {
+  font-size: 14px;
+}
+
+/*Uso Extend con el boton ir hacia arriba*/
 .limpiar-el-formulario {
-    border-radius: 3px;
-    color: #FDF6F0;
-    cursor: pointer;
-    background-color:#5A6C61;
+  color: #FDF6F0;
+  background-color: #5A6C61;
 }
+
 .enviar-consulta {
-    border-radius: 3px;
-    color: #FDF6F0;
-    cursor: pointer;
-    background-color:#5A6C61;
+  color: #FDF6F0;
+  background-color: #5A6C61;
 }
+
 /* Media queries contacto en Mobile y tablet */
 @media (max-width: 768px) {
-    .contacto{
-        margin: 20px;
-    } 
-    .contacto h2 {
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
-    .form div {
-        font-size: 14px;
-    }
+  .contacto {
+    margin: 20px;
+  }
+  .contacto h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .form div {
+    font-size: 14px;
+  }
+  .form-control {
+    font-size: 12px;
+  }
 }
+@media (max-width: 380px) {
+  .contacto {
+    margin: 20px;
+  }
+  .contacto h2 {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .form div {
+    font-size: 12px;
+  }
+  .form-control {
+    font-size: 12px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

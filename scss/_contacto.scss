@@ -1,0 +1,68 @@
+.contacto{
+    display: flex;
+    justify-content: center;
+    margin: $espacio-medio;
+} 
+.contacto h2 {
+    font-size: $fuente-grande;
+    margin-bottom: $espacio-medio;
+}
+.form {
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    gap: $espacio-chico;
+    justify-content: left;
+}
+.form div {
+    display: flex;
+    align-items: left;
+    flex-direction: row;
+    gap: $espacio-extrachico;
+    font-family: $fuente-principal;
+}
+.form-control {
+    font-size: 14px;
+}
+/*Uso Extend con el boton ir hacia arriba*/
+.limpiar-el-formulario {
+    @extend .ir-hacia-arriba;
+    color: $color-body;
+    background-color:#5A6C61;
+}
+.enviar-consulta {
+    @extend .ir-hacia-arriba;
+    color: $color-body;
+    background-color:#5A6C61;
+}
+/* Media queries contacto en Mobile y tablet */
+@media (max-width: $tablet) {
+    .contacto{
+        margin: $espacio-chico;
+    } 
+    .contacto h2 {
+        font-size: $fuente-media;
+        margin-bottom: $espacio-chico;
+    }
+    .form div {
+        font-size: $fuente-chica;
+    }
+    .form-control {
+        font-size: 12px;
+    }
+}
+@media (max-width: $mobile) {
+    .contacto{
+        margin: $espacio-chico;
+    } 
+    .contacto h2 {
+        font-size: 16px;
+        margin-bottom: $espacio-chico;
+    }
+    .form div {
+        font-size: 12px;
+    }
+    .form-control {
+        font-size: 12px;
+    }
+}

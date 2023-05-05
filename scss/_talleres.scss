@@ -1,0 +1,143 @@
+/* Empieza Talleres */
+.talleres {
+    margin: $espacio-medio;
+    @include flex;
+    flex-direction: column;
+}
+.talleres h2 {
+    font-size: $fuente-grande;
+    margin-bottom: $espacio-extrachico;
+}
+.parrafo-talleres {
+display: inline-block;
+justify-content: space-between;
+margin: $espacio-extrachico;
+font-size: $fuente-media;
+}
+.consulta-talleres {
+    margin-top: $espacio-grande;
+    margin-bottom: $espacio-grande;
+    @include flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #5A6C61;
+    padding: $espacio-extrachico;
+    margin-left: $espacio-grande;
+    margin-right: $espacio-grande;
+}
+.parrafo-consulta-talleres {
+    color: $color-body;
+    display: inline-block;
+    text-align: center;
+    font-size: $fuente-media;
+}
+.whatsapp {
+    margin-top: 10px;
+    border-radius: 3px;
+    padding: 5px;
+    color: $color-body;
+    cursor: pointer;
+    background-color:#5A6C61;
+    font-size: $fuente-media;
+}
+.alumnos {
+    display: flex;
+    justify-content: left;
+}
+.alumnos h4 {
+    font-size: $fuente-media;
+    margin-left: $espacio-grande;
+    color: #c08660;
+    margin-top: $espacio-grande;
+}
+.fotos-alumnos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $espacio-medio;
+    margin-top: $espacio-chico;   
+}
+.fotos-alumnos img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+/* Media Queries talleres en mobile y tablet*/
+@media (max-width: $tablet) {
+    .talleres {
+        margin: $espacio-chico;
+    }
+    .talleres h2 {
+        font-size: $fuente-media;
+    }
+    .parrafo-talleres {
+    font-size: $fuente-chica;
+    margin: $espacio-chico;
+    }
+    .consulta-talleres {
+        margin: $espacio-extrachico;
+        padding: 5px;
+    }
+    .parrafo-consulta-talleres {
+        font-size: $fuente-chica;
+    }
+    .whatsapp {
+        margin-top: 5px;
+        border-radius: 3px;
+        padding: 3px;
+        font-size: $fuente-chica;
+    }
+    .alumnos h4 {
+        font-size: $fuente-chica;
+        margin-left: $espacio-extrachico;
+        margin-top: $espacio-extrachico;
+    }
+    .fotos-alumnos {
+        gap: $espacio-extrachico;
+        margin-top: $espacio-extrachico;   
+    }
+    .fotos-alumnos img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+    }  
+}
+@media (max-width: $mobile) {
+    .talleres {
+        margin: $espacio-extrachico;
+    }
+    .talleres h2 {
+        font-size: 16px;
+    }
+    .parrafo-talleres {
+    font-size: 12px;
+    margin: $espacio-chico;
+    }
+    .consulta-talleres {
+        margin: $espacio-extrachico;
+        padding: 5px;
+    }
+    .parrafo-consulta-talleres {
+        font-size: 12px;
+    }
+    .whatsapp {
+        margin-top: 5px;
+        border-radius: 3px;
+        padding: 3px;
+        font-size: 12px;
+    }
+    .alumnos h4 {
+        font-size: $fuente-chica;
+        margin-left: $espacio-extrachico;
+        margin-top: $espacio-extrachico;
+    }
+    .fotos-alumnos {
+        gap: $espacio-extrachico;
+        margin-top: $espacio-extrachico;   
+    }
+    .fotos-alumnos img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }  
+}

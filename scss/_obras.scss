@@ -1,0 +1,165 @@
+/* aca empieza mis obras */
+.mis-obras {
+    margin-top: 40px;
+    @include flex;
+    flex-direction: column;
+}
+.mis-obras h2 {
+    font-size: $fuente-grande;
+    justify-content: center;
+}
+.ilustracion {
+    @include flex;
+    flex-direction: column;
+}
+.ilustracion h3 {
+    justify-content: center;
+    font-size: $fuente-media;
+    margin: $espacio-grande;
+    background-color: #c08660;
+    border-radius: 10px;
+    padding: $espacio-extrachico;
+}
+.fotos-ilustracion {
+    @include flex;
+    gap: 200px;
+    flex-wrap: wrap;
+}
+.fotos-ilustracion img {
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+}
+.pinturas {
+    @include flex;
+    flex-direction: column;
+}
+.pinturas h3 {
+    justify-content: center;
+    font-size: $fuente-media;
+    margin: $espacio-grande;
+    background-color: #c08660;
+    border-radius: 10px;
+    padding: $espacio-extrachico;
+}
+.fotos-pinturas {
+    @include flex;
+    gap: 200px;
+    flex-wrap: wrap;
+}
+.fotos-pinturas img {
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+}
+.retratos {
+    @include flex;
+    flex-direction: column;
+}
+.retratos h3 {
+    justify-content: center;
+    font-size: $fuente-media;
+    margin: $espacio-grande;
+    background-color: #c08660;
+    border-radius: 10px;
+    padding: $espacio-extrachico;
+}
+.fotos-retratos {
+    @include flex;
+    gap: 200px;
+    flex-wrap: wrap;
+}
+.fotos-retratos img {
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+}
+/* Media queries de Obras en mobile y tablet */
+@media (max-width: $tablet) { 
+    .mis-obras {
+        margin-top: $espacio-chico;
+    }
+    .mis-obras h2 {
+        font-size: $fuente-media;
+    }
+    .ilustracion h3 {
+        font-size: $fuente-chica;
+        padding: 6px;
+    }
+    .fotos-ilustracion {
+        gap: $espacio-grande;
+    }
+    .fotos-ilustracion img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+    }
+    .pinturas h3 {
+        font-size: $fuente-chica;
+        padding: 6px;
+    }
+    .fotos-pinturas {
+        gap: $espacio-grande;
+    }
+    .fotos-pinturas img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+    }
+    .retratos h3 {
+        font-size: $fuente-chica;
+        padding: 6px;
+    }
+    .fotos-retratos {
+        gap: $espacio-grande;
+    }
+    .fotos-retratos img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+    }
+}
+@media (max-width: $mobile) { 
+    .mis-obras {
+        margin-top: $espacio-chico;
+    }
+    .mis-obras h2 {
+        font-size: 16px;
+    }
+    .ilustracion h3 {
+        font-size: $fuente-chica;
+        padding: 6px;
+    }
+    .fotos-ilustracion {
+        gap: $espacio-medio;
+    }
+    .fotos-ilustracion img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+    }
+    .pinturas h3 {
+        font-size: $fuente-chica;
+        padding: 6px;
+    }
+    .fotos-pinturas {
+        gap: $espacio-medio;
+    }
+    .fotos-pinturas img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+    }
+    .retratos h3 {
+        font-size: $fuente-chica;
+        padding: 6px;
+    }
+    .fotos-retratos {
+        gap: $espacio-medio;
+    }
+    .fotos-retratos img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+    }
+}

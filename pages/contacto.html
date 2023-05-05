@@ -10,7 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-    <title>Sofi Allegretti Arte - Contacto</title>
+    <title>Sofi Allegretti Arte | Contacto</title>
+    <meta name="description" content="Aquí podrán enviarme consultas y comentarios. No dudes en consultar por talleres y trabajos a medida!">
+    <meta name="keywords" content="artista, arte, cuadro, cuadros, pinturas, pintura, acuarela, acuarelas, oleo, lienzo, retratos, plastico, plasticas, contemporaneo, tradicional, recuadros, marcos">
 </head>
 <body>
     <!-- Header igual en todas las páginas del sitio -->
@@ -53,27 +55,27 @@
     <main class="contacto">
         <h2>Contacto</h2>
         <form class="form">
-            <div class="nombre">
+            <div class="nombre" class="form-group">
                 <label for="nombre">Nombre y apellido</label>
-                <input type="text" id="nombre" placeholder="Ingresa tu nombre" required>
+                <input type="text" id="nombre" placeholder="Ingresa tu nombre" required class="form-control">
             </div>
-            <div class="email">
+            <div class="email" class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Ingresa tu email" required>
+                <input type="email" id="email" placeholder="Ingresa tu email" required class="form-control">
             </div>
-            <div class="tel">
+            <div class="tel" class="form-group">
                 <label for="telefono">Teléfono</label>
-                <input type="tel" id="telefono" placeholder="Ingresa tu teléfono">
+                <input type="tel" id="telefono" placeholder="Ingresa tu teléfono" class="form-control">
             </div>
-            <div class="consulta">
+            <div class="consulta" class="form-group">
                 <label for="consulta">Consulta</label>
-                <textarea id="consulta" cols="30" rows="10" required placeholder="Ingresa tu consulta"></textarea>
+                <textarea id="consulta" cols="30" rows="10" required placeholder="Ingresa tu consulta" class="form-control"></textarea>
             </div>
-            <div>
-                <input type="submit" value="Enviar consulta" class="enviar-consulta">
+            <div class="form-group">
+                <input type="submit" value="Enviar consulta" class="enviar-consulta" class="form-control">
             </div>
-            <div>
-                <input type="reset" value="Limpiar el formulario" class="limpiar-el-formulario">
+            <div class="form-group">
+                <input type="reset" value="Limpiar el formulario" class="limpiar-el-formulario" class="form-control">
             </div>
         </form>
     </main>

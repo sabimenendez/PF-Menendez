@@ -1,0 +1,45 @@
+/*colores*/
+$color-header: #FDF6F0;
+$color-letras: #415047;
+$color-body: #FDF6F0;
+$color-footer: #EEDDC9;
+/*tamaño fuentes*/
+$fuente-chica: 14px;
+$fuente-media: 20px;
+$fuente-grande: 30px;
+/*resolucion de pantallas*/
+$mobile: 380px;
+$tablet: 768px;
+$desktop: 992px;
+$desktopXG: 1200px;
+/*margen y paddings*/
+$espacio-chico: 20px;
+$espacio-extrachico: 10px;
+$espacio-medio: 30px;
+$espacio-grande: 50px;
+/*fuente*/
+$fuente-principal: 'Montserrat', sans-serif;
+/*Mixin para los flexs*/
+@mixin flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flex-fila-centrado {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+@mixin iconos-desktop {
+    width: 20px;
+    height: 20px;
+}
+@mixin iconos-tablet {
+    width: 15px;
+    height: 15px;
+}
+@mixin iconos-mobile {
+    width: 10px;
+    height: 10px;
+}

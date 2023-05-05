@@ -1,0 +1,120 @@
+/* Empieza inicio */
+/* Grid para el inicio en formato desktop*/
+.sobre-mi {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 0.5fr 2fr 2fr;
+    row-gap: 20px;
+    column-gap: 10px;
+    grid-template-areas: 
+        ". titulo ."
+        "foto parrafo parrafo"
+        ". video .";
+        justify-content: stretch;
+        align-content: stretch;
+    }
+    .sobre-mi-titulo {
+        grid-area: titulo;
+        font-size: $fuente-grande;
+        align-self: center;
+        justify-self: center;
+    }
+    .sobre-mi-foto {
+        grid-area: foto;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-left: 60px;
+    }
+    .sobre-mi-parrafos {
+        grid-area: parrafo;
+        margin-top: 50px;
+        justify-self: center;
+        margin-right: 60px;
+        margin-left: 60px;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+    }
+    .sobre-mi-parrafos p {
+        font-size: 16px;
+    }
+    .sobre-mi-video {
+        grid-area: video;
+        border-radius: 10px;
+        justify-self: center;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+/* Media queries para formato mobile y tablet del index*/
+@media (max-width: $tablet) {
+    .sobre-mi {
+        @include flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .sobre-mi-titulo {
+        font-size: $fuente-media;
+        align-self: center;
+        justify-self: center;
+    }
+    .sobre-mi-foto {
+        width: 250px;
+        height: 250px;
+        margin-left: 0px;
+    }
+    .sobre-mi-parrafos {
+        margin-top: 0px;
+        justify-self: center;
+        margin-right: $espacio-chico;
+        margin-left: $espacio-chico;
+        gap: 5px;
+    }
+    .sobre-mi-parrafos p {
+        font-size: $fuente-chica;
+        justify-items: center;
+    }
+    .sobre-mi-video {
+        justify-self: center;
+        margin-top: $espacio-extrachico;
+        margin-bottom: $espacio-chico;
+        width: 350px;
+        height: 300px;
+    }
+}
+@media (max-width: $mobile) {
+    .sobre-mi {
+        @include flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .sobre-mi-titulo {
+        font-size: 16px;
+        align-self: center;
+        justify-self: center;
+    }
+    .sobre-mi-foto {
+        width: 200px;
+        height: 200px;
+        margin-left: 0px;
+    }
+    .sobre-mi-parrafos {
+        margin-top: 0px;
+        justify-self: center;
+        margin-right: $espacio-chico;
+        margin-left: $espacio-chico;
+        gap: 5px;
+    }
+    .sobre-mi-parrafos p {
+        font-size: 12px;
+        justify-items: center;
+    }
+    .sobre-mi-video {
+        justify-self: center;
+        margin-top: $espacio-extrachico;
+        margin-bottom: $espacio-chico;
+        width: 250px;
+        height: 200px;
+    }
+}
